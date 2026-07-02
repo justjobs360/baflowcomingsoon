@@ -1,0 +1,809 @@
+BA-IN-A-BOX | Development Proposal v2.0
+
+BA-IN-A-BOX
+PLATFORM
+Development Proposal - Version 2.0
+A BA-Native Operating System with Baseline ML Engine & Decision
+Intelligence
+MVP Edition - Updated Scope
+
+Project Overview
+Duration: 8 to 10 Weeks (Revised MVP) | Total Investment: $- USD
+Stack: Next.js 14+ · Node.js · PostgreSQL · pgvector · Baseline ML · OpenAI API · Firebase Auth
+· Vercel + Railway
+Architecture: BA-native workflow >> structured artefacts >> knowledge ingestion >> AI-assisted
+analysis >> decision intelligence
+
+Confidential | 1
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+1. Executive Summary
+BA-in-a-Box is a purpose-built Business Analysis operating system. This updated proposal
+reflects the revised scope following client review, with five critical additions that sharpen the
+product's differentiation and prevent it drifting into generic project management or decorative AI
+territory.
+The five additions incorporated into this version:
+•​
+•​
+•​
+•​
+•​
+
+A baselined ML engine seeded with BA industry playbooks, capable of learning from
+users over time
+A formally defined BA ontology - entities, relationships, and lifecycle states - giving the
+product its 'brain'
+A precisely defined minimum lovable BA workflow with an exact user journey from
+initiative creation to outcome evaluation
+A Decision Intelligence Layer adding root-cause analysis, KPI trend analysis, anomaly
+detection, and conversational querying
+An AI-guided Problem Discovery module as the mandatory entry point to every BA
+initiative
+
+The core product architecture is: BA-native workflow >> structured artefacts >> knowledge
+ingestion >> AI-assisted analysis >> decision intelligence.
+
+Confidential | 2
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+2. What Makes This Different
+The risk with any BA tool is that it becomes another project management board with AI labels on
+it. This product is architected to avoid that outcome at the foundation level, not as an
+afterthought.
+
+Not a PM Tool
+•​
+
+•​
+
+PM tools manage tasks, timelines, and resources. BA-in-a-Box manages the intellectual
+work of analysis - problem definition, stakeholder alignment, requirement integrity, and
+decision quality.
+BA workflow stages, artefacts, and governance exist because the BA discipline requires
+them - not because they are generic features.
+
+Not Decorative AI
+•​
+•​
+•​
+
+AI features are embedded in the BA ontology, not bolted on. Every AI output is traceable
+to a specific artefact, relationship, or lifecycle state.
+The baseline ML engine learns from real BA work, not just static prompts. It improves as
+the platform is used.
+The insight engine goes beyond summarisation into root-cause analysis, anomaly
+detection, and conversational querying of live project data.
+
+The Product Has a Brain
+The BA ontology formally defines how business goals, requirements, decisions, risks, and
+solution evaluations connect across time. Every relationship in the system is intentional, typed,
+and queryable. This is the structural foundation that makes deep analytics possible.
+
+Confidential | 3
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+3. The BA Ontology - Formal Entity & Relationship Model
+The ontology is the product's core intelligence layer. It defines every entity type, the typed
+relationships between them, and the lifecycle states each entity moves through. This is what
+allows the insight engine to perform meaningful analysis rather than surface-level summaries.
+Entity
+
+Relationships
+
+Lifecycle States
+
+Business Goal
+
+Has many Requirements; links to Evaluation
+outcomes; owns KPIs
+
+Active / Achieved / Missed /
+Retired
+
+Stakeholder
+
+Owns Requirements; participates in Elicitation
+sessions; approves artefacts
+
+Identified / Engaged /
+Approved / Archived
+
+Requirement
+(FR/NFR)
+
+Child of Goal; parent of User Stories; links to
+Risks and Decisions
+
+Draft / Under Review /
+Baselined / Changed /
+Retired
+
+User Story
+
+Child of Requirement; owns Acceptance
+Criteria; links to Evaluation
+
+Draft / Ready / In Progress /
+Done / Deferred
+
+Risk / Assumption
+
+Links to Requirements and Decisions; has
+mitigation path
+
+Open / Mitigated / Accepted
+/ Closed
+
+Decision
+
+Links to Requirements, Risks, and Goals;
+carries rationale
+
+Proposed / Approved /
+Implemented / Superseded
+
+Solution Evaluation
+
+Links back to Goals and Requirements;
+carries outcome metrics
+
+Planned / In Progress /
+Complete
+
+All relationships are bidirectional and queryable. For example: 'Show all open risks linked to
+baselined requirements that have not yet been evaluated' is a single ontology query, not a
+manual cross-reference exercise.
+
+Confidential | 4
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+4. Minimum Lovable BA Workflow
+The workflow below is the exact, ordered user journey every initiative follows. Stages are
+enforced by default; users may turn off optional steps for lightweight initiatives. Each stage
+produces specific artefacts and populates the BA ontology in real time.
+#
+
+Stage
+
+What Happens
+
+Artefacts Produced
+
+1
+
+Problem
+Discovery &
+Context Setting
+
+AI-guided interview or text input to gather
+background, define business problem, clarify
+objectives, identify stakeholders, define
+scope/constraints, and set the BA approach
+
+Initiative record, Problem
+Statement, Stakeholder
+register (draft), Scope
+definition, BA Plan
+
+2
+
+Stakeholder
+Engagement &
+Elicitation
+
+Structured elicitation sessions - interviews,
+workshops, surveys. Multi-user input
+supported. Stakeholder requirements captured
+against profiles
+
+Stakeholder Requirements,
+Interview notes, Elicitation
+log
+
+3
+
+Requirements
+Modelling
+
+FRs, NFRs, user stories with acceptance
+criteria. All artefacts linked to parent goals and
+stakeholders via the BA ontology
+
+FR/NFR register, User
+Stories, Traceability matrix
+
+4
+
+Review &
+Approval
+
+Configurable approval routing. Critical
+artefacts enforced before stage progression.
+Full version history maintained
+
+Approved requirements
+baseline, Sign-off records
+
+5
+
+AI Review &
+Insight Engine
+
+ML-powered gap analysis, root-cause
+analysis, KPI trend analysis, anomaly
+detection, and conversational querying over
+live project metrics
+
+Insight report, Gap log,
+Recommendations
+
+6
+
+Solution
+Evaluation &
+Closure
+
+Outcome vs. original goal comparison.
+Lessons learned. Artefact archival and formal
+closure
+
+Evaluation report, Lessons
+learned, Archived project
+
+Stage 1 (Problem Discovery) is the mandatory entry point. No initiative can progress without a
+defined problem statement and at least one stakeholder. This design choice is deliberate - it
+ensures the product always starts where BA starts.
+
+Confidential | 5
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+5. Exact User Journey - Step by Step
+Below is the precise screen-level journey a user follows from first login through to outcome
+evaluation:
+Step
+
+User Action / System Behaviour
+
+Output
+
+Create Initiative
+
+User names the initiative and selects input
+mode: text entry or AI interview
+
+Initiative record created;
+ontology context window opens
+
+AI Interview /
+Problem Definition
+
+AI asks adaptive questions: background,
+problem, objectives, stakeholders, scope,
+constraints. Each answer informs the next
+question
+
+Problem statement, background
+summary, initial stakeholder list
+auto-populated
+
+System Sets BA
+Approach
+
+Based on gathered context, system
+recommends elicitation methods, analysis
+approach, and artefact templates
+
+BA Plan generated; workflow
+stages activated
+
+Add & Engage
+Stakeholders
+
+Define stakeholder roles; optionally invite
+collaborators for multi-user elicitation
+
+Stakeholder profiles, linked
+requirements slots opened
+
+Capture
+Requirements
+
+Structured input for FRs, NFRs, user
+stories. Auto-linked to goals and
+stakeholders
+
+Requirements register;
+traceability links built in real
+time
+
+Link Artefacts
+
+Explicit relationship mapping across goals,
+requirements, risks, decisions, and
+evaluations
+
+BA ontology graph populated
+
+Run AI Review
+
+Insight engine analyses for gaps,
+anomalies, KPI trends, root causes;
+conversational query interface activated
+
+Insight report; recommended
+actions
+
+Approve
+
+Stakeholder sign-off workflow; enforces
+baseline before progression
+
+Approved baseline; audit trail
+entry
+
+Evaluate Outcomes
+
+Post-delivery comparison of results vs.
+original goals and KPIs
+
+Evaluation report; lessons
+learned
+
+AI Interview Mode - Problem Discovery Detail
+When a user selects AI Interview mode at the start of an initiative, the system enters an
+adaptive questioning flow:
+•​
+
+Gather background information for the project
+◦​ System asks: 'Describe the business context and what is driving this initiative.'
+◦​ User responds in natural language; answer is parsed and stored as structured background
+data.
+
+•​
+
+Identify and engage stakeholders
+◦​ System asks: 'Who are the key stakeholders? Are multiple people contributing to this intake?'
+◦​ User can name stakeholders for single-session entry or invite collaborators for async input.
+
+Confidential | 6
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+•​
+
+Clarify the business problem and objectives
+◦​ System asks: 'What is the specific problem you are trying to solve? What does success look
+like?'
+
+•​
+
+◦​ Problem statement and KPIs are auto-generated from the response.
+Define scope and constraints
+◦​ System asks: 'What is in scope and out of scope? Are there known constraints, deadlines, or
+dependencies?'
+
+•​
+
+System sets the BA approach
+◦​ Based on all gathered context, the system recommends elicitation methods, templates, and
+◦​
+
+an analysis plan.
+User reviews and confirms or adjusts before the workflow proceeds.
+
+Confidential | 7
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+6. ML Engine & Decision Intelligence Layer
+The baseline ML engine is not a wrapper around a general-purpose LLM. It is a purposefully
+scoped model seeded with BA domain knowledge and designed to learn from real user
+behaviour over time.
+Component
+
+Description
+
+Capabilities
+
+Baseline ML Engine
+(MVP)
+
+Seed model trained on BA industry
+playbooks (BABOK, Agile
+Extension, CBAP study materials).
+Learns from user interactions over
+time
+
+Classification, gap detection,
+next-step recommendations,
+requirement quality scoring
+
+Insight Engine
+
+Decision intelligence layer sitting
+above raw AI features
+
+Root-cause analysis, KPI trend
+analysis, anomaly detection,
+conversational querying over live
+project metrics
+
+Conversational
+Analyst
+
+Natural language interface to
+query any project data
+
+'Show all requirements linked to Goal
+3 with open risks', 'Which
+stakeholders have not approved?'
+
+Retraining Pipeline
+
+Captures user corrections,
+feedback, and new project data to
+retrain the model periodically
+
+Continuous model improvement;
+organisation-specific accuracy gains
+over time
+
+Seed Knowledge Sources
+•​
+•​
+•​
+•​
+•​
+
+BABOK Guide (Business Analysis Body of Knowledge)
+Agile Extension to the BABOK
+CBAP / CCBA study materials and practice frameworks
+Industry-standard requirement templates and elicitation guides
+Internal BA playbooks provided by the client (to be ingested at setup)
+
+Learning Loop
+Every user action that corrects an AI suggestion, accepts a recommendation, or provides
+feedback is captured as a training signal. The retraining pipeline processes these signals
+periodically, updating the model without requiring manual intervention. Over time, the product
+becomes measurably smarter on the specific types of initiatives the organisation runs.
+
+Confidential | 8
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+7. AI Features - Full Module List
+All AI modules are grounded in the BA ontology and operate on structured project data, not
+unstructured text alone:
+Module
+
+Capability
+
+Summarisation
+
+Condenses meeting notes and long requirement sets into structured
+insights
+
+Drafting Assistance
+
+Suggests or completes requirements and user stories based on project
+context and BA ontology
+
+Classification
+
+Auto-tags artefacts as FR/NFR, assigns priority, categorises stakeholder
+requests
+
+Gap Detection
+
+Flags missing traceability (e.g. goal with no linked requirements,
+requirement with no acceptance criteria)
+
+Recommendations
+
+Proposes next BA steps based on current project state and playbook
+guidance
+
+Root-Cause Analysis
+
+Traces requirement failures or goal misalignments back through the
+ontology graph
+
+KPI Trend Analysis
+
+Monitors project health metrics and surfaces trends across the initiative
+lifecycle
+
+Anomaly Detection
+
+Identifies unusual patterns in artefact data, stakeholder activity, or
+requirement volatility
+
+Conversational
+Querying
+
+Natural language interface to interrogate any live project data or metric
+
+Confidential | 9
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+8. Technology Stack
+Layer
+
+Technology
+
+Frontend
+
+Next.js 14+ (App Router, TypeScript strict mode)
+
+Backend
+
+Next.js API Routes / Node.js services
+
+Database
+
+PostgreSQL via Supabase (direct client, no Supabase Auth)
+
+Vector Search
+
+pgvector - semantic search and ML embeddings
+
+ML / AI
+
+Baseline model (BA playbook seed) + OpenAI API + open-source NLP
+
+Caching
+
+Upstash Redis
+
+Auth
+
+Firebase Auth + Supabase role-based access
+
+Hosting
+
+Vercel (frontend) + Railway / AWS (backend services)
+
+Stack choices are unchanged from v1 with one addition: the baseline ML model layer, built on
+open-source NLP tooling and trained against BA playbook data before first deployment.
+
+Confidential | 10
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+9. Development Milestones & Pricing
+The revised scope adds two new milestones (AI Interview Engine and Insight Engine) and
+expands the knowledge/ML milestone to cover baseline model training. Timeline and cost are
+revised accordingly:
+#
+
+Milestone
+
+Scope
+
+Timeline
+
+Cost
+
+1
+
+BA Ontology &
+Workflow
+Architecture
+
+Define formal ontology (entities,
+relationships, lifecycle states). Design the
+minimum lovable BA workflow and exact
+user journey. Architecture planning.
+
+7 – 10 days
+
+$100
+
+2
+
+AI Interview Engine
+& Problem
+Discovery Module
+
+Adaptive AI interview system. Context
+gathering, problem definition,
+scope/constraints, BA approach
+auto-generation.
+
+7 – 10 days
+
+$140
+
+3
+
+Core Backend - Data
+Model & APIs
+
+Full artefact schema implementing the BA
+ontology. Relationships, traceability tables,
+lifecycle state machine. Core REST APIs.
+
+7 – 10 days
+
+$130
+
+4
+
+Workflow Engine &
+Lifecycle State
+Machine
+
+Stage-based workflow with formal state
+transitions. Artefact generation per stage.
+Completeness enforcement.
+
+7 – 10 days
+
+$130
+
+5
+
+Knowledge Engine
+& Baseline ML
+Model
+
+BA playbook ingestion pipeline. Seed ML
+model training. pgvector semantic search.
+Retraining pipeline foundation.
+
+8 – 12 days
+
+$160
+
+6
+
+Insight Engine &
+Decision
+Intelligence Layer
+
+Root-cause analysis, KPI trend analysis,
+anomaly detection, conversational query
+interface over live project data.
+
+7 – 10 days
+
+$150
+
+7
+
+Frontend - Workflow
+UI & Artefact Editors
+
+Stage-by-stage UI. Structured artefact
+editors. Ontology graph view. Traceability
+explorer. AI interview interface.
+
+8 – 12 days
+
+$140
+
+8
+
+Governance Versioning,
+Approvals & Audit
+
+Artefact versioning, approval workflow,
+immutable audit logs, diff view.
+
+5 – 7 days
+
+$90
+
+9
+
+Testing,
+Optimisation &
+Deployment
+
+End-to-end testing, performance
+optimisation, production deployment.
+
+5 – 7 days
+
+$80
+
+8 – 10
+Weeks
+
+-
+
+Total Estimate (Lean MVP)
+
+The revised total reflects the addition of the AI interview module, the baseline ML engine
+training work, and the decision intelligence layer. These are not optional extras - they are the
+features that make this product genuinely differentiated.
+
+Confidential | 11
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+10. What Is Not in the MVP
+The following are deliberately deferred to Phase 2 to protect MVP timeline and budget:
+•​
+•​
+•​
+•​
+•​
+•​
+
+SSO and enterprise identity management
+Custom ML training pipelines on client-specific data (seed model only in MVP)
+Deep process mining from event logs
+Portfolio-level analytics across multiple simultaneous initiatives
+Large-scale multi-tenant infrastructure with dedicated schemas
+Predictive modelling and benchmarking
+
+Confidential | 12
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+11. Phase 2 Expansion (Post-MVP)
+Once the MVP is live and generating real user data, Phase 2 builds out the enterprise layer and
+advances the ML model from a seed to a trained, organisation-specific intelligence:
+Capability
+
+Detail
+
+Advanced ML Training
+
+Custom training pipelines on accumulated client project data;
+organisation-specific model fine-tuning
+
+Full Multi-Tenant SaaS
+
+Dedicated schemas, per-tenant billing, admin console, usage analytics
+
+Process Mining
+
+Automated process discovery and pattern analysis from event logs
+
+Enterprise Governance
+
+SSO, compliance reporting, full enterprise audit trails
+
+Vertical Playbooks
+
+Industry-specific BA templates - finance, healthcare, government,
+technology
+
+Extended Analytics
+
+Predictive modelling, portfolio-level BA health scoring, benchmarking
+
+Confidential | 13
+
+BA-IN-A-BOX | Development Proposal v2.0
+
+12. Final Notes
+This version of the proposal directly addresses every point raised in the client review. The
+product now has a clearly defined brain (the BA ontology), a proper entry point (AI-guided
+problem discovery), a minimum lovable workflow with an exact user journey, a baseline ML
+engine that learns over time, and an insight engine that goes well beyond summarisation.
+The architecture guarantees three outcomes:
+•​
+•​
+•​
+
+BA-native - every feature exists because BA requires it, not because it is standard SaaS
+scaffolding
+Genuinely intelligent - the ML engine and insight layer make this a smart product from
+day one
+Scalable - the ontology-first design means Phase 2 adds capability without architectural
+rework
+
+Proposal updated based on client review.
+
+Confidential | 14
+
+
